@@ -1,10 +1,17 @@
 <template>
-    <ul>
-        <li> <a href="#">Gérer le Blog</a></li>
-        <li> <a href="#">Blog</a></li>
-        <li> <a href="#">Login</a></li>
-    </ul>
+    <nav>
+        <ul>
+            <li> <router-link to="#">Gérer le Blog</router-link></li>
+            <li> <router-link to="#">Blog</router-link></li>
+            <li> <router-link to="#">Login</router-link></li>
+        </ul>
+    </nav>
 </template>
+
 <script>
 
 </script>
+
+<style scoped>
+
+</style>
