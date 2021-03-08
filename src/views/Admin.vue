@@ -1,14 +1,14 @@
 <template>
-    <Header />
+    <headerBlog />
     <blog-edit />
 </template>
 <script>
     import BlogEdit from "../components/BlogEdit"
-    import Header from '../components/Header.vue'
+    import headerBlog from '../components/Header.vue'
     export default {
         components : {
         BlogEdit,
-        Header,
+        headerBlog,
         }
     }
     
