@@ -1,6 +1,6 @@
 <template>
     <headerBlog />
-    <blog-edit />
+    <blog-edit class="content" />
 </template>
 <script>
     import BlogEdit from "../components/BlogEdit"
@@ -14,5 +14,9 @@
     
 </script>
 <style scoped>
-
+    .content{
+        border: solid black 1px;
+        max-width: 75%;
+        margin: auto;
+    }   
 </style>

@@ -1,17 +1,37 @@
 <template>
-    <div class="row">
-        <div class="col-lg-3">
-            <p>test</p>
+    <div class="row editBlog">
+        <div class="col-lg-10 row">
+            <div class="col-lg-4    "> 
+                <img v-bind:src="img" class="image">
+            </div>
+            <div class="col-lg-8">
+                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, nesciunt! Repellat modi, 
+               expedita, minima id tempora accusantium alias porro exercitationem dolores error autem assumenda! 
+               Mollitia dolorum molestias veniam? Sed, harum?</p> 
+
+            </div>
+          
         </div>
-        <div class="col-lg-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, nesciunt! Repellat modi, expedita, minima id tempora accusantium alias porro exercitationem dolores error autem assumenda! Mollitia dolorum molestias veniam? Sed, harum?
+        <div class="col-lg-2" style="display: flex;">
+            <button class="edit">Edit</button>
+             <button class="edit">supprimer</button>
         </div>
-        <div class="col-lg-3">test</div>
     </div>
 </template>
 <script>
-    
+export default {
+     data() {
+         return{
+            img : "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+         }
+       
+    },
+}
+   
 </script>
 <style scoped>
-
+    .image{
+        width: 90%;
+        height: auto;
+    }
 </style>
