@@ -21,7 +21,7 @@
                 <a href="#">Modifier l'image</a>
             </div>
         </div>
-        <div class="mb-3">
+        <div class="mb-3" id="bottom">
             <label for="exampleInputPassword1" class="form-label">Meta Description</label>
             <textarea class="form-control" > </textarea>
         </div>
@@ -73,5 +73,19 @@
     #metaDes {
         width: 80%;
         margin: 0 auto;
+    }
+    #bottom {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+    }
+    #bottom textarea {
+        width: 75%;
+    }
+    button {
+        margin-bottom: 50px;
+        margin-top: 25px;
     }
 </style>
