@@ -1,14 +1,11 @@
 <template>
-    <div class="row editBlog">
+    <div class="row">
         <div class="col-lg-10 row">
             <div class="col-lg-4    "> 
                 <img v-bind:src="img" class="image">
             </div>
             <div class="col-lg-8">
-                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, nesciunt! Repellat modi, 
-               expedita, minima id tempora accusantium alias porro exercitationem dolores error autem assumenda! 
-               Mollitia dolorum molestias veniam? Sed, harum?</p> 
-
+                 <p>{{msg}}</p>
             </div>
           
         </div>
@@ -23,6 +20,7 @@ export default {
      data() {
          return{
             img : "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+            msg: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, nesciunt! Repellat modi,expedita, minima id tempora accusantium alias porro exercitationem dolores error autem assumenda! Mollitia dolorum molestias veniam? Sed, harum?"
          }
        
     },

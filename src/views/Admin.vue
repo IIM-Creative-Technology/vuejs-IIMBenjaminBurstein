@@ -1,18 +1,24 @@
 <template>
     <headerBlog />
-    <blog-edit class="content" />
+    <blog-admin class="content"  />
+    <blog-list class="content"  />    
+    <blog-info />
     <blog-form />
 </template>
 
 <script>
-    import BlogEdit from "../components/BlogEdit"
-import BlogForm from '../components/BlogForm.vue'
+    import BlogAdmin from "../components/BlogAdmin"
+    import BlogForm from '../components/BlogForm.vue'
+    import BlogInfo from '../components/BlogInfo.vue'
+    import BlogList from '../components/BlogList.vue'
     import headerBlog from '../components/Header.vue'
     export default {
         components : {
-        BlogEdit,
+        BlogAdmin,
         headerBlog,
-         BlogForm,
+        BlogList,
+        BlogInfo,
+        BlogForm,
         }
     }
     
