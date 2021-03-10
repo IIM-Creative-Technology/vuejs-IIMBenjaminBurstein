@@ -1,12 +1,12 @@
 <template>
-    <p>fou</p>
+    <blog-form />
 </template>
 <script>
-// import BlogForm from '../components/BlogForm.vue'
-// export default {
-//   components: { BlogForm },
+import BlogForm from '../components/BlogForm.vue'
+export default {
+  components: { BlogForm },
     
-// }
+}
 </script>
 <style scoped>
 

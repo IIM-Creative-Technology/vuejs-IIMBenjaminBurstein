@@ -1,5 +1,5 @@
 <template>
-    <blog-form></blog-form>
+    <blog-form />
 </template>
 
 <script>
