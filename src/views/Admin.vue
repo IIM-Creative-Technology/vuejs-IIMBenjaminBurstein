@@ -1,15 +1,18 @@
 <template>
     <headerBlog />
     <blog-edit class="content" />
+    <blog-form />
 </template>
 
 <script>
     import BlogEdit from "../components/BlogEdit"
+import BlogForm from '../components/BlogForm.vue'
     import headerBlog from '../components/Header.vue'
     export default {
         components : {
         BlogEdit,
         headerBlog,
+         BlogForm,
         }
     }
     
