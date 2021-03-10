@@ -2,10 +2,12 @@
     <headerBlog />
     <blog-admin class="content"  />
     <blog-list class="content"  />    
+    <blog-info />
 </template>
 
 <script>
     import BlogAdmin from "../components/BlogAdmin"
+    import BlogInfo from '../components/BlogInfo.vue'
     import BlogList from '../components/BlogList.vue'
     import headerBlog from '../components/Header.vue'
     export default {
@@ -13,6 +15,7 @@
         BlogAdmin,
         headerBlog,
         BlogList,
+        BlogInfo,
         }
     }
     
