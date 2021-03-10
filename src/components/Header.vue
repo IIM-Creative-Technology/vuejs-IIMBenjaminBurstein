@@ -1,8 +1,8 @@
 <template>
     <nav>
         <ul>
-            <li> <router-link to="#">Gérer le Blog</router-link></li>
-            <li class="barre"> <router-link to="#">Blog</router-link></li>
+            <li> <router-link to="/admin">Gérer le Blog</router-link></li>
+            <li class="barre"> <router-link to="/">Blog</router-link></li>
             <li class="barre"> <router-link to="#">Login</router-link></li>
         </ul>
     </nav>

@@ -1,19 +1,18 @@
 <template>
-    <headerBlog />
     <blog-admin class="content"  />
     <blog-list class="content"  />    
     <blog-info />
+    <router-view></router-view>
 </template>
 
 <script>
     import BlogAdmin from "../components/BlogAdmin"
     import BlogInfo from '../components/BlogInfo.vue'
     import BlogList from '../components/BlogList.vue'
-    import headerBlog from '../components/Header.vue'
     export default {
+        name: "admin",
         components : {
         BlogAdmin,
-        headerBlog,
         BlogList,
         BlogInfo,
         }

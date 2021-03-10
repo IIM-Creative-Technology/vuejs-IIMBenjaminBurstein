@@ -1,11 +1,13 @@
 <template>
-  <admin/>
+  <header-blog />
+  <router-view></router-view> 
 </template>
 <script>
-import admin from "./views/Admin"
+  import headerBlog from './components/Header.vue'
   export default {
+  components: { headerBlog },
   name: 'app',
-  components : { admin },  
+
 }
 </script>
 <style>
