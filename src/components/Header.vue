@@ -35,7 +35,7 @@ nav {
     }
     a:hover {
         font-weight: bold;
-        color: black;
+        color: rgb(24, 24, 24);
         border-bottom: 1px solid black;
         transition: 0.3s;
     }
