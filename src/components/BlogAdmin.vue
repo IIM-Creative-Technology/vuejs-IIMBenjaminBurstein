@@ -10,8 +10,8 @@
           
         </div>
         <div class="col-lg-2" style="display: flex;">
-            <button class="edit">Edit</button>
-             <button class="edit">supprimer</button>
+            <button class="edit"><router-link to="/admin/edit">Edit</router-link></button>
+            <button class="edit">supprimer</button>
         </div>
     </div>
 </template>
