@@ -4,7 +4,7 @@
             <div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Titre de la Page</label>
-                    <input type="text" class="form-control" id="" disabled="disabled" value="title.page">
+                    <input type="text" class="form-control" id="" value="title.page" disabled="disabled">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Meta Title</label>
