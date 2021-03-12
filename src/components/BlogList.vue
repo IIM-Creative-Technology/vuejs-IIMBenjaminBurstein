@@ -1,5 +1,4 @@
 <template>
-<h1>salut</h1>
 <div v-for="content in contents" :key="content.blog">
     <div class="row content">
             <div class="col-lg-4 "> 
@@ -7,7 +6,7 @@
             </div>
             <h2>{{content.title}}</h2>
             <div class="col-lg-8">
-                 <p>{{msg}}</p>
+                 <p>{{content.metaDesc}}</p>
             </div>
           
     </div>
@@ -18,7 +17,7 @@ export default {
     
     computed : {
         contents() {
-            return this.$store.state.contents
+            return this.$store.state.posts
         }
     }
 }
