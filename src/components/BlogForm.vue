@@ -31,7 +31,13 @@
 </template>
 
 <script>
-
+export default {
+   methods: {
+    //    add(){
+    //        this.$store.dispatch('add', [this])
+    //    }
+   },
+}
 </script>
 
 <style scoped>

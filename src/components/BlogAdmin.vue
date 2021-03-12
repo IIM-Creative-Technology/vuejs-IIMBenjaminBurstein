@@ -1,17 +1,17 @@
 <template>
-    <div class="row">
+    <button class="add"><router-link to="/create">Ajouter un produit</router-link></button>
+    <div class="row content">
         <div class="col-lg-10 row">
             <div class="col-lg-4    "> 
                 <img v-bind:src="img" class="image">
             </div>
             <div class="col-lg-8">
                  <p>{{msg}}</p>
-            </div>
-          
+            </div>  
         </div>
         <div class="col-lg-2" style="display: flex;">
             <button class="edit"><router-link to="/admin/edit">Edit</router-link></button>
-            <button class="edit">supprimer</button>
+            <button class="del">supprimer</button>
         </div>
     </div>
 </template>
@@ -32,4 +32,9 @@ export default {
         width: 90%;
         height: auto;
     }
+     .content{
+        border: solid black 1px;
+        max-width: 75%;
+        margin: auto;
+    }   
 </style>

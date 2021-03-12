@@ -1,12 +1,23 @@
-import { createStore } from 'vuex'
+import Vuex from 'vuex'
 
-export default createStore({
-  state: {
+export default new Vuex.Store({
+  state: { //data
+    // posts : [{
+    //   'title':  'test',
+    // }],
   },
-  mutations: {
+  mutations: { //
+    // add(state, payload){
+    //     state.posts.push(payload);
+    // }
   },
-  actions: {
+  actions: { //methods
+    // addP({commit}, payload) {
+    //   if(payload.title != ''){
+    //     commit('add')
+    //   }
+    // }
   },
-  modules: {
+  modules: { 
   }
 })

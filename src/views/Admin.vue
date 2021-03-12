@@ -1,6 +1,6 @@
 <template>
 <div>
-    <blog-admin class="content"  />
+    <blog-admin   />
     <router-view></router-view>
    
 </div>
@@ -18,11 +18,7 @@
     
 </script>
 <style scoped>
-    .content{
-        border: solid black 1px;
-        max-width: 75%;
-        margin: auto;
-    }   
+   
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     * {
         margin: 0 auto;
