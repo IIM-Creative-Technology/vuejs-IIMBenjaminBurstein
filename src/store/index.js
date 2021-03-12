@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-
+import router from '../router/index.js';
 export default new Vuex.Store({
   state: { //data
     posts : [],
@@ -7,6 +7,7 @@ export default new Vuex.Store({
   mutations: { //
     addPost(state, payload){
         state.posts.push(payload);
+        router.push('/admin');
     }
   },
   actions: { //methods

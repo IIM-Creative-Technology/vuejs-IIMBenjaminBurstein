@@ -1,12 +1,14 @@
 <template>
+<h1>Admin</h1>
     <button class="add"><router-link to="/create">Ajouter un produit</router-link></button>
-    <div class="row content">
+    <div v-for="content in contents" :key="content.blog">
+    <div class="row content" >
         <div class="col-lg-10 row">
             <div class="col-lg-4    "> 
-                <img v-bind:src="img" class="image">
+                <img v-bind:src="content.img" class="image">
             </div>
             <div class="col-lg-8">
-                 <p>{{msg}}</p>
+                 <p>{{content.metaDesc}}</p>
             </div>  
         </div>
         <div class="col-lg-2" style="display: flex;">
@@ -14,16 +16,16 @@
             <button class="del">supprimer</button>
         </div>
     </div>
+    </div>
 </template> 
 <script>
 export default {
-     data() {
-         return{
-            img : "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
-            msg: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, nesciunt! Repellat modi,expedita, minima id tempora accusantium alias porro exercitationem dolores error autem assumenda! Mollitia dolorum molestias veniam? Sed, harum?"
-         }
-       
-    },
+
+    computed : {
+        contents() {
+            return this.$store.state.posts
+        }
+    }
 }
    
 </script>

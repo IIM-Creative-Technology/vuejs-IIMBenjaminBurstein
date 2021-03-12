@@ -28,7 +28,7 @@
             <textarea v-model.trim="content" class="form-control"> </textarea>
         </div>
     
-      <button @click="add"   class="btn btn-primary">Valider les modifications</button>
+        <button @click="add" class="btn btn-primary">Valider les modifications</button>
 </template>
 
 <script>
