@@ -1,43 +1,54 @@
 <template>
-    <form>
         <div id="align">
             <div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Titre de la Page</label>
-                    <input  type="text" class="form-control" id="" value="title.page"  :disabled=" $route.name != 'create' ">
-
+                    <input v-if=" $route.name != 'create'"  type="text" class="form-control" id="" value="titre"  disabled="disabled">
+                    <input v-else  type="text" class="form-control" id="" v-model.trim="title">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Meta Title</label>
-                    <input type="text" class="form-control">
+                    <input v-model.trim="metaTitle" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Meta Description</label>
-                    <input type="text" class="form-control">
+                    <input v-model.trim="metaDesc" type="text" class="form-control">
                 </div>
             </div>
             <div id="img">
                 <img src="https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg"
                     alt="image blog">
-                <a href="#">Modifier l'image</a>
+                <label>Modifier l'image</label>
+                <input type="text" />
             </div>
         </div>
         <div class="mb-3" id="bottom">
-            <label for="exampleInputPassword1" class="form-label">Meta Description</label>
-            <textarea class="form-control" > </textarea>
+            <label for="exampleInputPassword1" class="form-label">Content</label>
+            <textarea v-model.trim="content" class="form-control"> </textarea>
         </div>
     
-        <button  type="submit" class="btn btn-primary">Valider les modifications</button>
-    </form>
+        <button @click="add"   class="btn btn-primary">Valider les modifications</button>
 </template>
 
 <script>
 export default {
    methods: {
-    //    add(){
-    //        this.$store.dispatch('add', [this])
-    //    }
+
+       add(){
+           this.$store.dispatch('verifyPost', { 
+            'title' : this.title, 
+            'metaTitle' : this.metaTitle, 
+            'metaDesc': this.metaDesc, 
+            'content' : this.content, 
+            'img' : 'https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg' 
+            });
+       }
    },
+   computed: {
+       test() {
+           return this.$store.state;
+       }
+   }
 
        
    

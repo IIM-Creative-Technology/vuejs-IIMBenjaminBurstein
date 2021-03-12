@@ -4,8 +4,7 @@
 
 <script>
 import BlogForm from "../components/BlogForm"
-    export default {
-        
+    export default {  
         name: "create",
         components : {
             BlogForm,

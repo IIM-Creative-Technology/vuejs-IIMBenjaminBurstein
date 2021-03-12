@@ -2,21 +2,20 @@ import Vuex from 'vuex'
 
 export default new Vuex.Store({
   state: { //data
-    // posts : [{
-    //   'title':  'test',
-    // }],
+    posts : [],
   },
   mutations: { //
-    // add(state, payload){
-    //     state.posts.push(payload);
-    // }
+    addPost(state, payload){
+        state.posts.push(payload);
+    }
   },
   actions: { //methods
-    // addP({commit}, payload) {
-    //   if(payload.title != ''){
-    //     commit('add')
-    //   }
-    // }
+    verifyPost(context, payload) {
+      console.log(payload.title);
+      if(payload.title){
+        context.commit('addPost', payload);
+      }
+    }
   },
   modules: { 
   }
