@@ -30,7 +30,10 @@ const routes = [
     path: '/admin',
     name: 'admin',
     component: Admin,
-    children: [{path: 'edit',component: Edit}]
+    children: [{
+      path: 'edit/:id',
+      component: Edit
+    }]
   },
   {
     path: '/edit',
