@@ -1,22 +1,21 @@
 <template>
-<div v-for="content in contents" :key="content.blog">
+<h1>salut</h1>
+<div v-for="post in posts" :key="post.title">
     <div class="row content">
             <div class="col-lg-4 "> 
-                <img :src="content.img" class="image">
+                <img :src="post.img" class="image">
             </div>
-            <h2>{{content.title}}</h2>
+            <h2>{{post.title}}</h2>
             <div class="col-lg-8">
-                 <p>{{content.metaDesc}}</p>
-            </div>
-          
+                 <p>{{post.content}}</p>
+            </div>   
     </div>
 </div>
 </template>
 <script>
 export default {
-    
     computed : {
-        contents() {
+        posts() {
             return this.$store.state.posts
         }
     }
