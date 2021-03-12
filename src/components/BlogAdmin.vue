@@ -14,7 +14,7 @@
             <button class="del">supprimer</button>
         </div>
     </div>
-</template>
+</template> 
 <script>
 export default {
      data() {

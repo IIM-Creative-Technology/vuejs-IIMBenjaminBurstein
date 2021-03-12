@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row content">
             <div class="col-lg-4 "> 
                 <img v-bind:src="img" class="image">
             </div>
@@ -7,7 +7,7 @@
                  <p>{{msg}}</p>
             </div>
           
-        </div>
+    </div>
 </template>
 <script>
 export default {
@@ -31,4 +31,9 @@ export default {
         width: 90%;
         height: auto;
     }
+     .content{
+        border: solid black 1px;
+        max-width: 75%;
+        margin: auto;
+    }   
 </style>
