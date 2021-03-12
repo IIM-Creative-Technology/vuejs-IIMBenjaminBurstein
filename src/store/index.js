@@ -23,7 +23,7 @@ export default new Vuex.Store({
       for (var item in payload){
         console.log(item + '=' + payload[item]);
        
-        if(payload[item] != undefined){
+        if(payload[item] != undefined && payload[item] != '' && payload[item] != null){
           ok = 1
           console.log(ok);
         }else{
@@ -35,6 +35,9 @@ export default new Vuex.Store({
 
         if(ok === 1){
           context.commit('addPost', payload);
+        }else{
+          document.getElementById('error').style.display = "block";
+          console.log('non')
         }
     },
     verifyModifPost(context, payload) {
@@ -44,7 +47,7 @@ export default new Vuex.Store({
       }
        for (var item in payload[0]){
          console.log(item + '=' + payload[0][item]);
-         if( payload[0][item] != '' ){
+         if( payload[0][item] != '' && payload[0][item] != undefined && payload[0][item] != null  ){
            ok = 1
            console.log(ok)
          }else{
@@ -57,6 +60,7 @@ export default new Vuex.Store({
          if(ok === 1){
            context.commit('modifPost',payload);
          }else{
+           document.getElementById('error').style.display = "block";
            console.log('non')
          }
     }

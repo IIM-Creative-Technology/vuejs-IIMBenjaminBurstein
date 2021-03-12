@@ -1,5 +1,6 @@
 <template>
         <div id="align">
+            <h2 id="error">Erreur</h2>
             <div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Titre de la Page</label>
@@ -133,5 +134,9 @@ export default {
     button {
         margin-bottom: 50px;
         margin-top: 25px;
+    }
+    #error{
+        color: red;
+        display: none;
     }
 </style>
