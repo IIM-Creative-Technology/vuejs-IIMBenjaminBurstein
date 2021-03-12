@@ -16,10 +16,11 @@
                 </div>
             </div>
             <div id="img">
-                <img src="https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg"
+                <label>Image par défault</label>
+                <img  src="https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg"
                     alt="image blog">
                 <label>Modifier l'image</label>
-                <input type="text" />
+                <input v-model.trim="img" type="text" />
             </div>
         </div>
         <div class="mb-3" id="bottom">
@@ -40,7 +41,7 @@ export default {
             'metaTitle' : this.metaTitle, 
             'metaDesc': this.metaDesc, 
             'content' : this.content, 
-            'img' : 'https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg' 
+            'img' : this.img,
             });
        }
    },
