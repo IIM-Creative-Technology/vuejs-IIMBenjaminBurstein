@@ -4,8 +4,8 @@
             <div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Titre de la Page</label>
-                    <input type="text" class="form-control" id="" value="title.page" v-if="this.$route.name" disabled="disabled">
-                    <input type="text" class="form-control" id="" value="title.page" v-else disabled="disabled">
+                    <input  type="text" class="form-control" id="" value="posts.title"  :disabled=" $route.name != 'create' ">
+
                 </div>
                 <div class="mb-3">
                     <label for="Meta Title" class="form-label">Meta Title</label>
@@ -23,11 +23,11 @@
             </div>
         </div>
         <div class="mb-3" id="bottom">
-            <label for="Meta Description<" class="form-label">Meta Description</label>
+            <label for="Corps du post" class="form-label">Corps du post</label>
             <textarea class="form-control" > </textarea>
         </div>
-
-        <button type="submit" class="btn btn-primary">Valider les modifications</button>
+    
+        <button  type="submit" class="btn btn-primary">Valider les modifications</button>
     </form>
 </template>
 
@@ -38,6 +38,9 @@ export default {
     //        this.$store.dispatch('add', [this])
     //    }
    },
+
+       
+   
 }
 </script>
 
