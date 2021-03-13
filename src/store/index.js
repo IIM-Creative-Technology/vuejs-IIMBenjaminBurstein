@@ -12,12 +12,15 @@ export default new Vuex.Store({
     modifPost(state,payload) {
       state.posts[payload[1]] = payload[0];
       router.push('/');  
-    } 
+    }, 
+    delete(state,payload){
+      state.posts.splice(payload, 1)
+    }
   },
   actions: { //methods
     verifyPost(context, payload) {
      var ok;
-     if(payload.img === undefined){
+     if(payload.img === undefined || payload.img === ''){
        payload.img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pas_d%27image_disponible.svg/1200px-Pas_d%27image_disponible.svg.png';
      }
       for(var item in payload){

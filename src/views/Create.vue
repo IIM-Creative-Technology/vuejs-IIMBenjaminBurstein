@@ -13,6 +13,8 @@ import BlogForm from "../components/BlogForm"
 </script>
 
 <style scoped>
-
+    * {
+        margin: 0 auto;
+    }
 </style>
 

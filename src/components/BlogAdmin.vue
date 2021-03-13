@@ -13,14 +13,18 @@
             </div>
             <div class="col-lg-2" style="display: flex;">
                 <button class="edit"><router-link :to="'/admin/edit/'+index">Edit</router-link></button>
-                <button class="del">supprimer</button>
+                <button class="del" @click="remove">supprimer</button>
             </div>
         </div>
     </div>
 </template> 
 <script>
 export default {
-
+    methods : {
+        remove() {
+            this.$store.commit("delete", this.$route.params.id)
+        }
+    },
     computed : {
         posts() {
             return this.$store.state.posts

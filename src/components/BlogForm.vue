@@ -1,19 +1,20 @@
 <template>
+<div id="form">
         <div id="align">
             <h2 id="error">Erreur</h2>
             <div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Titre de la Page</label>
+                    <label class="form-label">Titre de la Page</label>
                     <input v-if="$route.name != 'create'"  type="text" class="form-control" id="" v-model.trim="newTitle" disabled="disabled">
                     <input v-else  type="text" class="form-control" id="" v-model.trim="title">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Meta Title</label>
+                    <label class="form-label">Meta Title</label>
                     <input v-if="$route.name != 'create'" v-model.trim="newMetaTitle"   type="text" class="form-control">
                     <input v-else  type="text" class="form-control" id="" v-model.trim="metaTitle" >
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Meta Description</label>
+                    <label class="form-label">Meta Description</label>
                     <input v-if="$route.name != 'create'" v-model.trim="newMetaDesc"   type="text" class="form-control">
                     <input v-else  type="text" class="form-control" id="" v-model.trim="metaDesc" >
                 </div>
@@ -28,12 +29,13 @@
             </div>
         </div>
         <div class="mb-3" id="bottom">
-            <label for="exampleInputPassword1" class="form-label">Content</label>
+            <label class="form-label">Content</label>
             <textarea v-if="$route.name != 'create'" v-model.trim="newContent" class="form-control"></textarea>
             <textarea v-else  v-model.trim="content" class="form-control"></textarea>
         </div>   
         <button v-if="$route.name === 'create'" @click="add" class="btn btn-primary">Créer le post</button>
         <button v-else  @click="put" class="btn btn-primary">Modifier le poste</button>
+</div>
 </template>
 
 <script>
@@ -80,7 +82,8 @@ export default {
 </script>
 
 <style scoped>
-    form {
+    #form {
+        margin-top: 50px;
         width: 40%;
         border: solid 1px black;
     }

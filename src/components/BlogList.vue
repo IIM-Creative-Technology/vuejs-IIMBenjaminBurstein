@@ -1,5 +1,5 @@
 <template>
-<h1>salut</h1>
+<h1>Blog</h1>
 <div v-for="(post, index) in posts" :key="(post, index)">
     <router-link :to=" '/show/'+index" >
         <div class="row content">
