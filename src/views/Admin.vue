@@ -1,7 +1,7 @@
 <template>
-<div>
-    <blog-admin   />
-    <router-view></router-view>
+<div class="AdEd">
+    <blog-admin class="blogAd"  />
+    <router-view class="blogEd"></router-view>
    
 </div>
     
@@ -25,4 +25,5 @@
         padding: 0;
         font-family: Roboto;
     }
+  
 </style>

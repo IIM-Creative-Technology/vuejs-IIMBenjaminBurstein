@@ -113,10 +113,8 @@ export default {
         border: black 1px solid;
         height: auto;
     }
-    #img a {
-        text-decoration: none;
-        color: black;
-        font-size: 18px;
+    #img input {
+       margin: 20px auto;
     }
     #metaDes {
         width: 80%;
