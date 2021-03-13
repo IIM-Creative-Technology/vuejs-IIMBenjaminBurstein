@@ -1,7 +1,8 @@
 <template>
 <h1>salut</h1>
-<div v-for="post in posts" :key="post.title">
-    <div class="row content">
+<div v-for="(post, index) in posts" :key="(post, index)">
+    <router-link :to=" '/show/'+index" >
+        <div class="row content">
             <div class="col-lg-4 "> 
                 <img :src="post.img" class="image">
             </div>
@@ -9,7 +10,8 @@
             <div class="col-lg-8">
                  <p>{{post.content}}</p>
             </div>   
-    </div>
+        </div>
+    </router-link>
 </div>
 </template>
 <script>

@@ -1,9 +1,6 @@
 <template>
 <div>
-  <router-link to="/show">
-        <blog-list />
-  </router-link>
-
+    <blog-list />
 </div>
 
 </template>

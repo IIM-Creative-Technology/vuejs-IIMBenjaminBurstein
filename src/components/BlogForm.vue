@@ -4,7 +4,7 @@
             <div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Titre de la Page</label>
-                    <input v-if=" $route.name != 'create'"  type="text" class="form-control" id="" v-model.trim="newTitle" disabled="disabled">
+                    <input v-if="$route.name != 'create'"  type="text" class="form-control" id="" v-model.trim="newTitle" disabled="disabled">
                     <input v-else  type="text" class="form-control" id="" v-model.trim="title">
                 </div>
                 <div class="mb-3">
@@ -20,9 +20,9 @@
             </div>
             <div id="img">
                 <label>Image par défault</label>
-                <img  src="https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg"
+                <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pas_d%27image_disponible.svg/1200px-Pas_d%27image_disponible.svg.png"
                     alt="image blog">
-                <label>Modifier l'image</label>
+                <label>Modifier l'image via un url</label>
                 <input v-if="$route.name != 'create'" v-model.trim="newImg"   type="text" />
                 <input v-else v-model.trim="img" type="text" />
             </div>
@@ -42,7 +42,6 @@ export default {
     data() {
         if(this.$route.name != 'create'){
              return {
-
             'newTitle' : this.$store.state.posts[this.$route.params.id].title,
             'newMetaTitle': this.$store.state.posts[this.$route.params.id].metaTitle,
             'newMetaDesc' : this.$store.state.posts[this.$route.params.id].metaDesc,
@@ -75,7 +74,6 @@ export default {
    computed: {
        posts() {
            return this.$store.state.posts;
-   
        },
    }
 }

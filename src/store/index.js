@@ -18,9 +18,9 @@ export default new Vuex.Store({
     verifyPost(context, payload) {
      var ok;
      if(payload.img === undefined){
-       payload.img = 'https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg';
+       payload.img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pas_d%27image_disponible.svg/1200px-Pas_d%27image_disponible.svg.png';
      }
-      for (var item in payload){
+      for(var item in payload){
         console.log(item + '=' + payload[item]);
        
         if(payload[item] != undefined && payload[item] != '' && payload[item] != null){
@@ -43,7 +43,7 @@ export default new Vuex.Store({
     verifyModifPost(context, payload) {
       var ok;
       if(payload[0].img === undefined || payload[0].img === ''){
-        payload[0].img = 'https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg';
+        payload[0].img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pas_d%27image_disponible.svg/1200px-Pas_d%27image_disponible.svg.png';
       }
        for (var item in payload[0]){
          console.log(item + '=' + payload[0][item]);
