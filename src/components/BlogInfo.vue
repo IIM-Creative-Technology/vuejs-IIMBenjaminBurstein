@@ -4,7 +4,7 @@
         <h2> {{$store.state.posts[$route.params.id].title}}</h2>
         <p>.{{$store.state.posts[$route.params.id].content}}</p>
         <div class="col-lg-3">
-            <p>Posté le 3 mars</p>
+            <p>{{$store.state.posts[$route.params.id].date}}</p>
         </div>
     </div>
 </template>

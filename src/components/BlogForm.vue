@@ -33,7 +33,7 @@
             <textarea v-if="$route.name != 'create'" v-model.trim="newContent" class="form-control"></textarea>
             <textarea v-else  v-model.trim="content" class="form-control"></textarea>
         </div>   
-        <button v-if="$route.name === 'create'" @click="add" class="btn btn-primary">Créer le post</button>
+        <button v-if="$route.name === 'create'" @click="add" class="btn btn-primary">Créer la page</button>
         <button v-else  @click="put" class="btn btn-primary">Modifier le poste</button>
 </div>
 </template>
@@ -49,6 +49,7 @@ export default {
             'newMetaDesc' : this.$store.state.posts[this.$route.params.id].metaDesc,
             'newContent':  this.$store.state.posts[this.$route.params.id].content,
             'newImg' :  this.$store.state.posts[this.$route.params.id].img,
+            'newDate' : this.$store.state.posts[this.$route.params.id].date,
             }   
         }
     },
@@ -60,6 +61,7 @@ export default {
             'metaDesc': this.metaDesc, 
             'content' : this.content, 
             'img' : this.img,
+            'date' : this.dataDate,
             });
         },
        put() {
@@ -69,6 +71,7 @@ export default {
             'metaDesc': this.newMetaDesc, 
             'content' : this.newContent, 
             'img' : this.newImg,
+            'date' : this.newDate,
             }, this.$route.params.id]);
            
        }
@@ -77,7 +80,20 @@ export default {
        posts() {
            return this.$store.state.posts;
        },
-   }
+        dataDate() {
+                var date = new Date();
+                let days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
+                let months = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre",
+                    "Octobre", "Novembre", "Decembre"
+                ]
+
+                var dayNumber = date.getDate();
+                var actualDay = days[date.getDay()]
+                var actualMonth = months[date.getMonth()]
+
+                return actualDay + " " + dayNumber + " " + actualMonth + " "
+   },
+}
 }
 </script>
 
