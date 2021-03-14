@@ -77,7 +77,4 @@ export default {
     #buttonAdmin button {
         margin: 0 5px;
     }
-    #BlogEdit {
-       
-    }
 </style>
