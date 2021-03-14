@@ -9,7 +9,9 @@ export default {
 </script>
 <style scoped>
   #editblog {
-   width: 40%;
+   width: 60%;
    border: solid 1px black;
+   margin-right: 25px;
   }
+  
 </style>

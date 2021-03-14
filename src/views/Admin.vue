@@ -2,7 +2,9 @@
     <div>
         <blog-add />
         <div id="edit">
+            <div>
             <blog-admin />
+            </div>
             <router-view></router-view>
         </div>
     </div>
@@ -28,8 +30,7 @@
         padding: 0;
         font-family: Roboto;
     }
-    #edit {
+    #edit{
         display: flex;
-    
     }
 </style>
