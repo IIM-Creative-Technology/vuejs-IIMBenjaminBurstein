@@ -5,18 +5,18 @@
             <div>
                 <div class="mb-3">
                     <label class="form-label">Titre de la Page</label>
-                    <input v-if="$route.name != 'create'"  type="text" class="form-control" id="" v-model.trim="newTitle" disabled="disabled">
-                    <input v-else  type="text" class="form-control" id="" v-model.trim="title">
+                    <input v-if="$route.name != 'create'"  type="text" class="form-control" v-model.trim="newTitle" disabled="disabled">
+                    <input v-else  type="text" class="form-control" v-model.trim="title">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Meta Title</label>
                     <input v-if="$route.name != 'create'" v-model.trim="newMetaTitle"   type="text" class="form-control">
-                    <input v-else  type="text" class="form-control" id="" v-model.trim="metaTitle" >
+                    <input v-else  type="text" class="form-control" v-model.trim="metaTitle" >
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Meta Description</label>
                     <input v-if="$route.name != 'create'" v-model.trim="newMetaDesc"   type="text" class="form-control">
-                    <input v-else  type="text" class="form-control" id="" v-model.trim="metaDesc" >
+                    <input v-else  type="text" class="form-control" v-model.trim="metaDesc" >
                 </div>
             </div>
             <div id="img">

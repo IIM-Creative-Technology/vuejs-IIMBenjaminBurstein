@@ -1,6 +1,4 @@
 <template>
-<h1>Admin</h1>
-    <button class="add"><router-link to="/create">Ajouter un produit</router-link></button>
     <div v-for="(post, index) in posts" :key="(post, index)" class="blogadmin">
         <div class="row content" >
             <div class="col-lg-10 row">
@@ -34,6 +32,10 @@ export default {
    
 </script>
 <style scoped>
+*{
+    text-decoration: none;
+    color: black;
+}
     .image{
         width: 90%;
         height: auto;
@@ -56,6 +58,6 @@ export default {
         align-items: center;
     }
     #buttonAdmin button {
-        margin: 0 10px;
+        margin: 0 5px;
     }
 </style>
