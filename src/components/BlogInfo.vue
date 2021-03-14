@@ -20,12 +20,10 @@ export default {
       return this.$store.state.posts;
     },  
     index() {
-      
         for( var index = 0;this.$store.state.posts.length > index; index++ ){
             if (this.$store.state.posts[index].title === this.$route.params.title) {
-            return index;
+              return index;
             }
-            index++; 
         }
         return 'error';
     }

@@ -18,11 +18,12 @@ export default new Vuex.Store({
     }
   },
   actions: { //methods
-    verifyPost(context, payload) {
+    verifyPost( { commit, state },payload) {
      var ok;
      if(payload.img === undefined || payload.img === ''){
        payload.img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pas_d%27image_disponible.svg/1200px-Pas_d%27image_disponible.svg.png';
      }
+    
       for(var item in payload){
         console.log(item + '=' + payload[item]);
        
@@ -36,8 +37,17 @@ export default new Vuex.Store({
           }
         }
 
+        for( var index = 0; state.posts.length > index; index++ ){
+          if (payload.title === state.posts[index].title) {
+            ok = 0;
+            break;
+          }else{
+            ok =1
+          }
+         
+        }
         if(ok === 1){
-          context.commit('addPost', payload);
+          commit('addPost', payload);
         }else{
           document.getElementById('error').style.display = "block";
           console.log('non')
