@@ -32,6 +32,6 @@ export default {
      .content{
         border: solid black 1px;
         max-width: 75%;
-        margin: auto;
+        margin: 25px auto;
     }   
 </style>

@@ -7,7 +7,7 @@
     <h2>{{ $store.state.posts[index].title }}</h2>
     <p>{{ $store.state.posts[index].content }}</p>
     <div class="col-lg-3">
-      <p>Posté le 3 mars</p>
+      <p>{{ $store.state.posts[index].date }}</p>
     </div>
   </div>
 </template>
