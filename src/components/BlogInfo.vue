@@ -28,8 +28,22 @@ export default {
         return 'error';
     }
   },
+   metaInfo() {
+    return {
+      title: "test meta data with vue",
+      meta: [
+        {
+          vmid: "description",
+          name: "description",
+          content:
+            "hello world, this is an example of adding a description with vueMeta"
+        }
+      ]
+    };
+   }
 };
 </script>
+
 <style scoped>
 .image {
   width: 25%;
