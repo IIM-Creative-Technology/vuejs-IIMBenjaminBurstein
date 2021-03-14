@@ -36,7 +36,7 @@ const routes = [
     }]
   },
   {
-    path: '/show/:id',
+    path: '/blog/:id',
     name: 'show',
     component: Show
   }

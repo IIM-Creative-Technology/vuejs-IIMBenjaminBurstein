@@ -1,7 +1,7 @@
 <template>
 <h1>Blog</h1>
 <div v-for="(post, index) in posts" :key="(post, index)">
-    <router-link :to=" '/show/'+index" >
+    <router-link :to=" '/blog/'+index" >
         <div class="row content">
             <div class="col-lg-4 "> 
                 <img :src="post.img" class="image">
