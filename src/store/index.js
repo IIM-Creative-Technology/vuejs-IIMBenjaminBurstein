@@ -25,13 +25,16 @@ export default new Vuex.Store({
      }
     
       for(var item in payload){
-        console.log(item + '=' + payload[item]);
+        var error1 = '';
+        var error2 = '';
        
         if(payload[item] != undefined && payload[item] != '' && payload[item] != null){
-          ok = 1
+          ok = 1;
+         
           console.log(ok);
         }else{
-            ok = 0
+            ok = 0;
+           error1 = 'veuillez remplir tous les champs';
             console.log(ok);
             break;
           }
@@ -40,21 +43,25 @@ export default new Vuex.Store({
         for( var index = 0; state.posts.length > index; index++ ){
           if (payload.title === state.posts[index].title) {
             ok = 0;
+           error2 = 'Le titre existe déjà pour un autre article';
             break;
           }else{
-            ok =1
+            ok =1;
+         
           }
          
         }
         if(ok === 1){
           commit('addPost', payload);
         }else{
+          document.getElementById('error').innerHTML = error1 + error2;
           document.getElementById('error').style.display = "block";
           console.log('non')
         }
     },
     verifyModifPost(context, payload) {
       var ok;
+      var error = '';
       if(payload[0].img === undefined || payload[0].img === ''){
         payload[0].img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pas_d%27image_disponible.svg/1200px-Pas_d%27image_disponible.svg.png';
       }
@@ -65,6 +72,7 @@ export default new Vuex.Store({
            console.log(ok)
          }else{
             ok = 0
+            error = 'veuillez remplir tous les champs';
             console.log(ok)
             break;
            }
@@ -73,6 +81,7 @@ export default new Vuex.Store({
          if(ok === 1){
            context.commit('modifPost',payload);
          }else{
+            document.getElementById('error').innerHTML = error;
            document.getElementById('error').style.display = "block";
            console.log('non')
          }
